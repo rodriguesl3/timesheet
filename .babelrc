@@ -1,0 +1,13 @@
+{
+  "env": {
+    "test": {
+      "presets": ["env", "react", "stage-2"]
+      // "plugins": ["transform-export-extensions"],
+      // "only": [
+      //   "./**/*.tsx",
+      //   "./**/*.js",
+      //   "node_modules/jest-runtime"
+      // ]
+    }
+  }
+}
