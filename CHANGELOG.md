@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.3](https://github.com/rodriguesl3/timesheet/compare/v0.0.2...v0.0.3) (2020-01-02)
+
+
+### Others
+
+* adjust commit lint git hooks ([21f41f6](https://github.com/rodriguesl3/timesheet/commit/21f41f65a85724cc9ee798798ebc68ce705e5af2))
+
 ### [0.0.2](https://github.com/rodriguesl3/timesheet/compare/v0.0.1...v0.0.2) (2020-01-02)
 
 
