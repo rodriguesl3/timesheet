@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 
-import Login from '../container/Login';
+import LoginForm from '../container/LoginForm';
 import Main from '../container/Main';
 
 //TODO: improve this file using React Suspense.
@@ -11,7 +11,7 @@ const AppRouter: FC = () => {
     <Router>
       <Switch>
         <Route path="/main" component={Main} />
-        <Route path="/" exact component={Login} />
+        <Route path="/" exact component={LoginForm} />
         {/* <Route component={NotFound} /> */}
       </Switch>
     </Router>
