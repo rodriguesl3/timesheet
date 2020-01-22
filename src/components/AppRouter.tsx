@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 
-import LoginForm from '../container/LoginForm';
+import LoginForm from '../container/Login/LoginForm';
 import Main from '../container/Main';
 
 //TODO: improve this file using React Suspense.
