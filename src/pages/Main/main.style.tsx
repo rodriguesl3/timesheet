@@ -8,8 +8,8 @@ export const SideBarContainer = styled.div`
   flex-direction: column;
   justify-content: space-around;
   z-index: 999;
-  transition: 0.7s cubic-bezier(0.075, 0.82, 0.165, 1);
-  background-color: blue;
+  box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+  background-color: #fff;
   width: 20%;
   height: 100vh;
 `;
