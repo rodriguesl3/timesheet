@@ -1,4 +1,4 @@
-import { call, put, delay } from 'redux-saga/effects';
+import { call, put } from 'redux-saga/effects';
 import { loginFailure, loginSuccess } from './action';
 import { LoginTypes, Login } from './types';
 import { toast } from 'react-toastify';
@@ -16,7 +16,7 @@ export function* load(action: LoginActionSagas): object {
       token: action.payload.token,
       username: action.payload.username,
     };
-    toast.success('success');
+
     console.log('LOGIN ', action.payload);
     yield put(loginSuccess(response));
   } catch (err) {
