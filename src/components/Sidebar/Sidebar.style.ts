@@ -1,17 +1,21 @@
 import styled from 'styled-components';
 
-export const MainContainer = styled.div``;
-
 export const SideBarContainer = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  align-items: center;
   z-index: 999;
-  box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.5);
   background-color: #fff;
-  width: 20%;
+  width: 5%;
+  min-width: 50px;
   height: 100vh;
-`;
+  margin-right: 50px;
+  transition: 0.3s;
 
-export const ContentContainer = styled.div``;
+  &:hover {
+    box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.5);
+  }
+`;
