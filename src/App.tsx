@@ -17,7 +17,7 @@ const App: React.FC = () => {
       <Provider store={store}>
         <ErrorBoundary>
           <ThemeProvider theme={lightTheme}>
-            <Navbar />
+            {/* <Navbar /> */}
             <Router />
           </ThemeProvider>
         </ErrorBoundary>
