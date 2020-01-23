@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
 import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 
-import LoginForm from '../container/Login/LoginForm';
-import Main from '../container/Main';
+import LoginForm from '../pages/LoginForm';
+import Main from '../pages/Main';
 
 //TODO: improve this file using React Suspense.
 //https://itnext.io/async-react-using-react-router-suspense-a86ade1176dc
