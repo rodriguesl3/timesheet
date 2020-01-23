@@ -1,24 +1,17 @@
 import React, { FC } from 'react';
-import { MainContainer, SideBarContainer } from './main.style';
+import { MainContainer, ContentContainer } from './main.style';
+import SideBar from '../../components/Sidebar/Sidebar';
 
 const Main: FC = () => {
   return (
-    <div>
-      <SideBarContainer>
-        <ul>
-          <li>this is an item</li>
-          <li>this is an item</li>
-          <li>this is an item</li>
-          <li>this is an item</li>
-          <li>this is an item</li>
-        </ul>
-      </SideBarContainer>
+    <ContentContainer>
+      <SideBar />
       <MainContainer>
         <h1>Main Page</h1>
         <div>HEADER</div>
         <div>Main Content</div>
       </MainContainer>
-    </div>
+    </ContentContainer>
   );
 };
 
