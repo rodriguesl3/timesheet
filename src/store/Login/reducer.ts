@@ -1,6 +1,5 @@
 import { Reducer } from 'redux';
 import { LoginState, LOGIN_INITIAL_STATE, LoginTypes } from './types';
-import { LoginActionSagas } from './sagas';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const loginReducer: Reducer<LoginState> = (state: LoginState = LOGIN_INITIAL_STATE, action: any) => {

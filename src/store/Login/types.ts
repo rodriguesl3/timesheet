@@ -1,5 +1,3 @@
-import Login from '../../container/Login/LoginForm';
-
 export enum LoginTypes {
   LOGIN_REQUEST = 'LOGIN_REQUEST',
   LOGIN_SUCCESS = 'LOGIN_SUCCESS',
