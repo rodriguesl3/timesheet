@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.2.0](https://github.com/rodriguesl3/timesheet/compare/v0.1.1...v0.2.0) (2020-01-23)
+
+
+### Features
+
+* add redux sagas, simulate login request ([bdf18a2](https://github.com/rodriguesl3/timesheet/commit/bdf18a22506d7f32461c382a25205ad87ba01b9c))
+* **login:** adjust component composition ([50a5235](https://github.com/rodriguesl3/timesheet/commit/50a52358486b7000ff90a3748d314d933c665791))
+* **login:** adjust login style page ([fc880cf](https://github.com/rodriguesl3/timesheet/commit/fc880cf7061358d46abb80e7d6978d98ed58dce5))
+* **login:** defined styled guide ([2932d9d](https://github.com/rodriguesl3/timesheet/commit/2932d9dc71d5924795d5aab301d2c192bf6eeee2))
+* **router:** implement first version of react-router ([0e691a0](https://github.com/rodriguesl3/timesheet/commit/0e691a05394ac7290dd2b43d3ffad236c9dc3229))
+
 ### 0.1.1 (2020-01-23)
 
 
