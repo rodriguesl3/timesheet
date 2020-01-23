@@ -5,4 +5,5 @@ export const MainContainer = styled.div``;
 export const ContentContainer = styled.div`
   display: flex;
   flex-direction: row;
+  background-color: #e9e9e9;
 `;
