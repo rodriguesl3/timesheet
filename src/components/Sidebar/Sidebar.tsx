@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faRocket } from '@fortawesome/free-solid-svg-icons';
+import { faRocket, faGamepad, faAtom, faMagic, faBolt, faGhost, faMailBulk } from '@fortawesome/free-solid-svg-icons';
 import { SideBarContainer } from './Sidebar.style';
 /**
  * reference to use font awesome with React
@@ -9,19 +9,19 @@ import { SideBarContainer } from './Sidebar.style';
 const SideBar: FC = () => {
   return (
     <SideBarContainer>
-      <FontAwesomeIcon icon={['fab', 'apple']} />
+      <FontAwesomeIcon icon={faAtom} />
       <hr />
-      <FontAwesomeIcon icon={['fab', 'microsoft']} />
+      <FontAwesomeIcon icon={faMagic} />
       <hr />
-      <FontAwesomeIcon icon={['fab', 'google']} />
+      <FontAwesomeIcon icon={faBolt} />
+      <hr />
+      <FontAwesomeIcon icon={faGamepad} />
+      <hr />
+      <FontAwesomeIcon icon={faGhost} />
       <hr />
       <FontAwesomeIcon icon={faRocket} />
       <hr />
-      <FontAwesomeIcon icon={['fab', 'google']} />
-      <hr />
-      <FontAwesomeIcon icon={faRocket} />
-      <hr />
-      <FontAwesomeIcon icon={['fab', 'google']} />
+      <FontAwesomeIcon icon={faMailBulk} />
       <hr />
     </SideBarContainer>
   );
