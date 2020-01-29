@@ -1,28 +1,12 @@
 import React, { FC } from 'react';
 import { LineChart, Line, AreaChart, XAxis, YAxis, CartesianGrid, Tooltip, Area } from 'recharts';
+import { useSelector } from 'react-redux';
+import { ProjectState } from '../../store/Projects/types';
+import { GlobalState } from '../../store/configureStore';
 
 /**
  * Rechart value: http://recharts.org/en-US/guide/getting-started
  */
-
-interface Evolution {
-  name: string;
-  uv: number;
-  pv: number;
-  amt: number;
-}
-
-interface Projects {
-  id: number;
-  name: string;
-  description: string;
-  color: string;
-  evolution: Evolution[];
-}
-
-interface ProjectProps {
-  title: string;
-}
 
 /**
  *
@@ -30,23 +14,18 @@ interface ProjectProps {
  * #2493ff
  * #9f4cf1
  *
- *
- *
  */
 
+interface ProjectProps {
+  title: string;
+}
+
 const Project: FC<ProjectProps> = (props: ProjectProps) => {
-  // const projects: Projects = {
-  //   name: 'Ciner',
-  //   description: 'DevOps',
-  //   color: '#8884d8',
-  //   id: 1,
-  //   evolution: [
-  //     { name: 'Page A', uv: 400, pv: 600, amt: 2400 },
-  //     { name: 'Page A', uv: 200, pv: 400, amt: 2400 },
-  //     { name: 'Page A', uv: 300, pv: 900, amt: 2400 },
-  //     { name: 'Page A', uv: 600, pv: 100, amt: 2400 },
-  //     { name: 'Page A', uv: 400, pv: 300, amt: 2400 },
-  //   ],
+  const projects: ProjectState = useSelector((state: GlobalState) => state.projectState);
+
+  // const parseGraphValue = () => {
+  //   //projects.projects.flatMap(proj => proj.evolution.map(evo => {[proj.name]: evo.value, [evo.name]:evo.value}))
+  //   projects.projects.map(proj => proj.evolution.map(evo => `{${proj.name}: ${evo.value}, name: ${evo.name}`));
   // };
 
   const data = [
@@ -97,6 +76,8 @@ const Project: FC<ProjectProps> = (props: ProjectProps) => {
   return (
     <div>
       <h1>{props.title}</h1>
+      <p>{projects.projects && projects.projects.map(pro => pro.name)}</p>
+
       <AreaChart width={400} height={250} data={data} margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
         <defs>
           <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
