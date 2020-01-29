@@ -2,6 +2,7 @@ import styled, { StyledComponentBase } from 'styled-components';
 
 export interface CardProps {
   width: number;
+  height?: number;
 }
 
 export const Card = styled.div<CardProps>`
@@ -15,7 +16,9 @@ export const Card = styled.div<CardProps>`
   justify-content: center;
   align-content: center;
   width: ${({ width = 0 }): number => width}%;
-
+  height: ${({ height = 300 }): number => height}vh;
+  margin: 30px;
+  max-height: 400px;
   &:hover {
     box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.5);
   }
