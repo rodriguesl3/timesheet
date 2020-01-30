@@ -4,12 +4,16 @@ import SideBar from '../../components/Sidebar/Sidebar';
 import Project from '../../components/Projects';
 import { Card } from '../../index.style';
 import Wallet from '../../components/Wallet/Wallet';
+import StockSymbols from '../../components/StockSymbols/StockSymbols';
 
 const Main: FC = () => {
   return (
     <ContentContainer>
       <SideBar />
       <MainContainer>
+        <Card width={30} height={20}>
+          <StockSymbols />
+        </Card>
         <h1>Main Page</h1>
         <div>HEADER</div>
         <Card width={30}>

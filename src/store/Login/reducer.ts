@@ -24,6 +24,9 @@ const loginReducer: Reducer<LoginState> = (state: LoginState = LOGIN_INITIAL_STA
       return {
         ...state,
         credential: action.payload,
+        loginSuccess: true,
+        loginFailure: false,
+        loginRequest: false,
       };
 
     default:
