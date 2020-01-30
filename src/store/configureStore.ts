@@ -9,6 +9,7 @@ import { LoginState } from './Login/types';
 import { SideBarState } from './Sidebar/types';
 import { ProjectState } from './Projects/types';
 import { StockSymbolsState } from './StockSymbols/types';
+import stockSymbolReducer from './StockSymbols/reducer';
 
 export interface BaseState {
   success: boolean;
@@ -27,6 +28,7 @@ const globalState = combineReducers({
   loginState: loginReducer,
   projectState: projectReducer,
   sidebarState: sidebarReducer,
+  stockSymbolState: stockSymbolReducer,
 });
 
 const sagaMiddleware = createSagaMiddleware();

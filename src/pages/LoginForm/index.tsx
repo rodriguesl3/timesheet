@@ -6,10 +6,11 @@ import { useSelector } from 'react-redux';
 import DescriptionContainer from '../../components/Login/Description';
 import { LoginState } from '../../store/Login/types';
 import LoginFormContent from '../../components/Login/LoginFormContent';
+import { GlobalState } from '../../store/configureStore';
 
 const LoginForm: FC = () => {
   const history = useHistory();
-  const loginState = useSelector((state: LoginState) => state);
+  const loginState = useSelector((state: GlobalState) => state.loginState);
 
   useEffect(() => {
     if (loginState.loginSuccess === true && loginState.credential && loginState.credential.username) {
