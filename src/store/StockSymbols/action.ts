@@ -11,3 +11,6 @@ export const stockSymbolSuccess = (
 
 export const stockSymbolFailure = (error: object): PayloadAction<StockSymbolsTypes.STOCKSYMBOLS_FAILURE, object> =>
   action(StockSymbolsTypes.STOCKSYMBOLS_FAILURE, error);
+
+export const stockSymbolFilter = (searchTerm: string): PayloadAction<StockSymbolsTypes.STOCKSIMBOLS_FILTER, string> =>
+  action(StockSymbolsTypes.STOCKSIMBOLS_FILTER, searchTerm);

@@ -9,18 +9,21 @@ export interface StockSymbol {
 
 export enum StockSymbolsTypes {
   STOCKSYMBOLS_REQUEST = 'STOCKSYMBOLS_REQUEST',
+  STOCKSIMBOLS_FILTER = 'STOCKSIMBOLS_FILTER',
   STOCKSYMBOLS_SUCCESS = 'STOCKSYMBOLS_SUCCESS',
   STOCKSYMBOLS_FAILURE = 'STOCKSYMBOLS_FAILURE',
 }
 
 export interface StockSymbolsState extends BaseState {
   stockSymbol: StockSymbol[];
+  stockSymbolFiltered: StockSymbol[];
 }
 
 export const STOCKSYMBOLS_INITIAL_STATE: StockSymbolsState = {
   failure: false,
   loading: false,
   success: true,
+  stockSymbolFiltered: [],
   stockSymbol: [
     { companyName: 'iShares MSCI All Country Asia Information Technology Index Fund', symbol: 'AAIT' },
     { companyName: 'American Airlines Group, Inc.', symbol: 'AAL' },

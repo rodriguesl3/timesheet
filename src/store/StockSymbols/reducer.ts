@@ -11,6 +11,10 @@ const stockSymbolReducer: Reducer<StockSymbolsState> = (
   action: SotckSymbolReducer,
 ) => {
   switch (action.type) {
+    case StockSymbolsTypes.STOCKSIMBOLS_FILTER:
+      const filtered = state.stockSymbol.filter(elm => elm.companyName.includes(action.payload));
+      const response = filtered.length > 20 ? filtered : filtered;
+      return { ...state, stockSymbolFiltered: [...response.slice(0, 30)] };
     case StockSymbolsTypes.STOCKSYMBOLS_SUCCESS:
       return { ...state, stockSymbol: [...(action.payload ?? [])], success: true, failure: false };
     case StockSymbolsTypes.STOCKSYMBOLS_FAILURE:
