@@ -14,11 +14,10 @@ function* parseHandleStockSymbols(jsonObject: any[]): Generator<StockSymbol[]> {
     //.filter(elm => elm['Company Name'].contains(searchTerm) || elm['Symbol'].contains(searchTerm))
     .map(
       (obj: any) =>
-        // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
-        <StockSymbol>{
+        ({
           companyName: obj['Company Name'],
           symbol: obj['Symbol'],
-        },
+        } as StockSymbol),
     );
 }
 
