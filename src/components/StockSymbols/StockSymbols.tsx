@@ -2,13 +2,14 @@ import React, { FC, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Select from 'react-select';
 
-import { StockSymbolsTypes } from '../../store/StockSymbols/types';
+import { StockSymbolsTypes, StockSymbol } from '../../store/StockSymbols/types';
 import { GlobalState } from '../../store/configureStore';
 import { Button } from 'bold-ui';
 import { SymbolContainer } from './StockSymbols.style';
+import { WalletTypes } from '../../store/Wallet/types';
 
 /**
- *
+ * Thanks!!! :)
  * https://jedwatson.github.io/react-select/
  */
 const StockSymbols: FC = () => {
@@ -17,13 +18,10 @@ const StockSymbols: FC = () => {
   const [selected, setSelected] = useState();
 
   const requestSymbol = (): void => {
-    console.log('clicked to search');
-
-    // dispatch(
-    //   {
-    //     type:
-    //   }
-    // )
+    dispatch({
+      type: WalletTypes.WALLET_REQUEST,
+      payload: selected as StockSymbol[],
+    });
   };
 
   const stockSymbolFiltered = (searchTerm: any): void => {
@@ -53,7 +51,7 @@ const StockSymbols: FC = () => {
           onChange={handleChange}
         />
 
-        <Button kind="primary" size="small">
+        <Button kind="primary" size="small" onClick={requestSymbol}>
           Search
         </Button>
       </SymbolContainer>
