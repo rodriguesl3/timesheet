@@ -10,6 +10,8 @@ import { SideBarState } from './Sidebar/types';
 import { ProjectState } from './Projects/types';
 import { StockSymbolsState } from './StockSymbols/types';
 import stockSymbolReducer from './StockSymbols/reducer';
+import { WalletState } from './Wallet/types';
+import walletReducer from './Wallet/reducer';
 
 export interface BaseState {
   success: boolean;
@@ -22,6 +24,7 @@ export interface GlobalState {
   sidebarState: SideBarState;
   projectState: ProjectState;
   stockSymbolState: StockSymbolsState;
+  walletState: WalletState;
 }
 
 const globalState = combineReducers({
@@ -29,6 +32,7 @@ const globalState = combineReducers({
   projectState: projectReducer,
   sidebarState: sidebarReducer,
   stockSymbolState: stockSymbolReducer,
+  walletState: walletReducer,
 });
 
 const sagaMiddleware = createSagaMiddleware();
