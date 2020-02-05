@@ -16,7 +16,7 @@ const walletReducer: Reducer<WalletState> = (
     case WalletTypes.WALLET_FAILURE:
       return { ...state, failure: true, loading: false, success: false };
     case WalletTypes.WALLET_SUCCESS:
-      return { ...state, companies: action.payload };
+      return { ...state, companies: action.payload, success: true, loading: false, failure: false };
     default:
       return state;
   }
