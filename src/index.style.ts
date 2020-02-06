@@ -18,7 +18,7 @@ export const Card = styled.div<CardProps>`
   width: ${({ width = 0 }): number => width}%;
   height: ${({ height = 300 }): number => height}vh;
   margin: 30px;
-  max-height: 400px;
+
   &:hover {
     box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.5);
   }
