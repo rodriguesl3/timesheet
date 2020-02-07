@@ -1,11 +1,11 @@
 import React, { FC } from 'react';
-import { LineChart, Line, AreaChart, XAxis, YAxis, CartesianGrid, Tooltip, Area } from 'recharts';
 import { useSelector } from 'react-redux';
-import { ProjectState } from '../../store/Projects/types';
 import { GlobalState } from '../../store/configureStore';
 import { Company } from '../../store/Wallet/types';
-import { Tabs, TabItem } from 'bold-ui';
-import { TabContainerExtension } from './projects.style';
+
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import 'react-tabs/style/react-tabs.css';
+import { ImgContainer } from './projects.style';
 
 /**
  * Rechart value: http://recharts.org/en-US/guide/getting-started
@@ -24,26 +24,29 @@ interface ProjectProps {
 }
 
 const Project: FC<ProjectProps> = (props: ProjectProps) => {
-  //const projects: ProjectState = useSelector((state: GlobalState) => state.projectState);
   const assets: Company[] = useSelector((state: GlobalState) => state.walletState.companies);
 
   return (
     <div>
       <h1>{props.title}</h1>
-      <TabContainerExtension>
-        {assets.map((company: Company, idx: number) => (
-          <>
-            <TabItem key={idx} onClick={console.log}>
-              {company.symbol}
-            </TabItem>
-            <div className="news-container">
-              {company.news.map((news, indx: number) => (
-                <div key={indx}>{news.summary}</div>
-              ))}
-            </div>
-          </>
-        ))}
-      </TabContainerExtension>
+      <Tabs>
+        <TabList>
+          {assets.map((company: Company, idx: number) => (
+            <Tab key={idx}>{company.symbol}</Tab>
+          ))}
+        </TabList>
+        {assets.map(company =>
+          company.news.map((news, indx: number) => (
+            <TabPanel key={indx}>
+              <ImgContainer>
+                <img src={news.image} alt="news-headline" />
+              </ImgContainer>
+              <p>{company.symbol}</p>
+              <p>{news.headline}</p>
+            </TabPanel>
+          )),
+        )}
+      </Tabs>
     </div>
   );
 };
