@@ -3,6 +3,7 @@ import { fullUrlBatchWalletInformation } from '../../services/constant';
 import { call, put } from 'redux-saga/effects';
 import api from '../../services';
 import { walletSuccess, walletFailure } from './action';
+import mockData from './mock.json';
 
 type selectTableList = {
   value: string;
@@ -15,6 +16,7 @@ export type WalletSagas = {
 };
 
 function* parseCompany(response: any, symbols: string[]): Generator<Company[]> {
+  symbols = ['GOOG', 'MSFT', 'AAPL'];
   const parseResponse = symbols.map(
     elm =>
       ({
@@ -31,8 +33,8 @@ function* parseCompany(response: any, symbols: string[]): Generator<Company[]> {
 export function* loadWalletInformation(action: WalletSagas): object {
   try {
     const symbols = action.payload.map(elm => elm.value);
-    //const apiResponse = yield call(api.get, fullUrlBatchWalletInformation(symbols));
-    const apiResponse = yield call(api.get, fullUrlBatchWalletInformation(symbols));
+    // const apiResponse = yield call(api.get, fullUrlBatchWalletInformation(symbols));
+    const apiResponse = { data: mockData };
     const parseResponse = yield parseCompany(apiResponse.data, symbols);
     yield put(walletSuccess(parseResponse));
   } catch (err) {
