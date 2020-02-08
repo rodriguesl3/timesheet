@@ -5,7 +5,7 @@ import { Company } from '../../store/Wallet/types';
 
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
-import { ImgContainer } from './projects.style';
+import { ImgContainer, NewsContainer, TabPanelExtension, NewsRootContainer } from './projects.style';
 
 /**
  * Rechart value: http://recharts.org/en-US/guide/getting-started
@@ -27,7 +27,7 @@ const Project: FC<ProjectProps> = (props: ProjectProps) => {
   const assets: Company[] = useSelector((state: GlobalState) => state.walletState.companies);
 
   return (
-    <div>
+    <NewsRootContainer>
       <h1>{props.title}</h1>
       <Tabs>
         <TabList>
@@ -35,19 +35,21 @@ const Project: FC<ProjectProps> = (props: ProjectProps) => {
             <Tab key={idx}>{company.symbol}</Tab>
           ))}
         </TabList>
-        {assets.map(company =>
-          company.news.map((news, indx: number) => (
-            <TabPanel key={indx}>
-              <ImgContainer>
-                <img src={news.image} alt="news-headline" />
-              </ImgContainer>
-              <p>{company.symbol}</p>
-              <p>{news.headline}</p>
-            </TabPanel>
-          )),
-        )}
+        {assets.map((company, idx: number) => (
+          <TabPanel key={idx} style={{ height: '600px', overflow: 'auto' }}>
+            {company.news.map((news, indx: number) => (
+              <NewsContainer key={indx}>
+                <ImgContainer>
+                  <img src={news.image} alt="news-headline" />
+                </ImgContainer>
+
+                <p>{news.headline}</p>
+              </NewsContainer>
+            ))}
+          </TabPanel>
+        ))}
       </Tabs>
-    </div>
+    </NewsRootContainer>
   );
 };
 

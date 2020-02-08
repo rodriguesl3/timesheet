@@ -17,7 +17,7 @@ const Main: FC = () => {
         <h1>Main Page</h1>
         <div>HEADER</div>
         <Card width={30} height={100}>
-          <Project title="This is your evolution" />
+          <Project title="What is going on" />
         </Card>
         <Card width={30} height={20}>
           <Wallet />
