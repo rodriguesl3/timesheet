@@ -2,10 +2,14 @@ import styled from 'styled-components';
 import { TabPanel } from 'react-tabs';
 
 export const NewsRootContainer = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
   height: 100%;
 `;
 
-export const TabPanelExtension = styled(TabPanel)`
+export const TabPanelExt = styled(TabPanel)`
   height: 500px;
   overflow: auto;
 `;
