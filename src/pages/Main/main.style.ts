@@ -14,7 +14,7 @@ export const ContentContainer = styled.div`
   width: 100%;
 
   .side-bar-news {
-    width: 35%;
+    width: 45%;
   }
 `;
 

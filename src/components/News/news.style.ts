@@ -23,7 +23,7 @@ export const ImgContainer = styled.div`
 export const NewsContainer = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   margin-top: 30px;
   margin-bottom: 30px;
   border-bottom: 1px solid gray;
