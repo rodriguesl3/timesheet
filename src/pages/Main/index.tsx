@@ -14,10 +14,7 @@ const Main: FC = () => {
         <Card width={70} height={20}>
           <StockSymbols />
         </Card>
-        {/* <h1>Main Page</h1>
-        <div>HEADER</div> */}
-
-        <Card width={70} height={20}>
+        <Card width={70} height={40}>
           <Wallet />
         </Card>
       </MainContainer>
