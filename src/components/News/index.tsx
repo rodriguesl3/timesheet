@@ -36,7 +36,7 @@ const News: FC<NewsProps> = (props: NewsProps) => {
           ))}
         </TabList>
         {assets.map((company, idx: number) => (
-          <TabPanel key={idx} style={{ height: '80vh', overflow: 'auto' }}>
+          <TabPanel key={idx} style={{ overflowX: 'hidden', height: '75vh' }}>
             {company.news.map((news, indx: number) => (
               <NewsContainer
                 key={indx}

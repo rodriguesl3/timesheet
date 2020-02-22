@@ -14,7 +14,7 @@ export interface Company {
   symbol: string;
   news: News[];
   chart: Chart[];
-  quote: Quote[];
+  quote: Quote;
 }
 
 export interface News {

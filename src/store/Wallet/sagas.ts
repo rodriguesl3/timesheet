@@ -16,7 +16,7 @@ export type WalletSagas = {
 };
 
 function* parseCompany(response: any, symbols: string[]): Generator<Company[]> {
-  symbols = ['GOOG', 'MSFT', 'AAPL'];
+  symbols = Object.keys(mockData);
   const parseResponse = symbols.map(
     elm =>
       ({

@@ -2,10 +2,10 @@ import React, { FC, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 
 import { GlobalState } from '../../store/configureStore';
-import { WalletCompanyContainer, WalletTitle } from './Wallet.style';
+import { WalletCompanyContainer, WalletTitle, SpikeContainer } from './Wallet.style';
 import { WalletState } from '../../store/Wallet/types';
 
-import ApexCharts from 'apexcharts';
+import Chart from 'react-apexcharts';
 
 /**
  * https://apexcharts.com/react-chart-demos/candlestick-charts/basic/
@@ -14,11 +14,10 @@ import ApexCharts from 'apexcharts';
 const Wallet: FC = () => {
   const wallet: WalletState = useSelector((state: GlobalState) => state.walletState);
 
-  const series = [
-    {
-      data: [25, 66, 41, 89, 63, 25, 44, 12, 36, 9, 54],
-    },
-  ];
+  const series = wallet.companies.map(comp => ({
+    symbol: comp.quote.companyName,
+    chart: [{ data: comp.chart.map(chart => chart.close) }],
+  }));
 
   const options = {
     series: series,
@@ -50,25 +49,25 @@ const Wallet: FC = () => {
     },
   };
 
-  useEffect(() => {
-    const chart = new ApexCharts(document.querySelector('#chart'), options);
-    chart.render();
-  }, [series]);
-
   return (
-    <div>
+    <>
       <WalletTitle>Your Portfolio</WalletTitle>
-      {wallet && wallet.companies ? (
-        <WalletCompanyContainer>
-          {wallet.companies.map((company, idx: number) => (
-            <div key={idx}>{company.symbol}</div>
-          ))}
-        </WalletCompanyContainer>
-      ) : (
-        <div>Not found a user.</div>
-      )}
-      <div id="chart"></div>
-    </div>
+      {series.map(segment => (
+        <SpikeContainer key={segment.symbol}>
+          <Chart options={options} series={segment.chart} type="line" width={50} height={50} />
+          <div className="symbol-description">
+            <span>{segment.symbol}</span>
+          </div>
+          <div className="spike-arrow">
+            {segment.chart[0].data[0] < segment.chart[0].data[segment.chart[0].data.length - 1] ? (
+              <span style={{ color: 'green' }}>up-arrow</span>
+            ) : (
+              <span style={{ color: 'red' }}>down-arrow</span>
+            )}
+          </div>
+        </SpikeContainer>
+      ))}
+    </>
   );
 };
 
