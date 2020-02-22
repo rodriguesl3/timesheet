@@ -2,6 +2,34 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.1](https://github.com/rodriguesl3/timesheet/compare/v0.2.0...v0.2.1) (2020-02-22)
+
+
+### Features
+
+* **main:** add rechart, add card layout ([4d075b4](https://github.com/rodriguesl3/timesheet/commit/4d075b4fc3ded0c206bc75e931f194f5535d3871))
+* **main:** add select component ([ae27452](https://github.com/rodriguesl3/timesheet/commit/ae27452e5e37cfda97f6f6c861dbe6a56e33c7d0))
+* **main:** create redux to consume stock symbols ([6a0983b](https://github.com/rodriguesl3/timesheet/commit/6a0983bc62f32c5d565efe255fb8a4eeafdb1226))
+* **main:** wip - working on first layout ([b60d8e5](https://github.com/rodriguesl3/timesheet/commit/b60d8e5d29e5087d14efe6497f6de5b42724bcb6))
+* **main-page:** getting stock information from api ([e7b7172](https://github.com/rodriguesl3/timesheet/commit/e7b7172a6a00c88528c2a7ded98a8591eaa28e41))
+* **news-section:** adding news from symbol requested ([8cd7239](https://github.com/rodriguesl3/timesheet/commit/8cd7239bc386c256e2df572af882bd46632b4b03))
+* **position:** draft a chart in position market ([4e7f70b](https://github.com/rodriguesl3/timesheet/commit/4e7f70b879816072e43e3bb32782e7cc148fa88f))
+* **sidebar:** add redux and redux sagas flow to request sidebar options ([55b6a24](https://github.com/rodriguesl3/timesheet/commit/55b6a243c84a9e66c930d6244ca57856ba2c2401))
+* **stocksymbols:** request stock symbols ([747b2d7](https://github.com/rodriguesl3/timesheet/commit/747b2d7629835ec2ac2980ea8103b9cdff61b041))
+* **wallet:** add ducks foldter structure for wallet component ([4f88bba](https://github.com/rodriguesl3/timesheet/commit/4f88bba4bb6aff510289d95217ec66637f7fe674))
+* **wip_wallet:** add redux and redux sagas structure ([2e2ccc1](https://github.com/rodriguesl3/timesheet/commit/2e2ccc13e3ab4bafacfedb72470abd53dbffa12b))
+
+
+### Styling
+
+* **main:** adjust content section background-color ([db33650](https://github.com/rodriguesl3/timesheet/commit/db33650db740c2268b41bb941c74b3839bc7b397))
+* **main:** adjust sidebar layout ([be62ceb](https://github.com/rodriguesl3/timesheet/commit/be62ceb7c43634499e9f9738854725d4a491b45a))
+* **main-page:** adjust card position and sizes ([6147848](https://github.com/rodriguesl3/timesheet/commit/6147848fed4376a94ad89dafa64820cbd4622023))
+* **main-page:** adjust position of cards in main page ([efc1792](https://github.com/rodriguesl3/timesheet/commit/efc1792409ab6be14bf3899d8097711d8406c3b5))
+* **news:** adjust news tab panel ([472306d](https://github.com/rodriguesl3/timesheet/commit/472306d234ed80429544361395291bcf12439057))
+* **news:** fix news list ([014a4a7](https://github.com/rodriguesl3/timesheet/commit/014a4a7867f8019c0e165c56c3e7dcf4c3f704ac))
+* **news_section:** (wip) styiling news section ([54dc3ab](https://github.com/rodriguesl3/timesheet/commit/54dc3abbb5fb56d8ff2cdb90ef7e1c75d8923148))
+
 ## [0.2.0](https://github.com/rodriguesl3/timesheet/compare/v0.1.1...v0.2.0) (2020-01-23)
 
 
