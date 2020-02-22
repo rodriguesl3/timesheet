@@ -16,8 +16,8 @@ export const Card = styled.div<CardProps>`
   justify-content: center;
   align-content: center;
   width: ${({ width = 0 }): number => width}%;
-  height: ${({ height = 300 }): number => height}vh;
-  margin: 30px;
+  ${({ height }): string => (height ? `height: ${height}vh` : '')};
+  margin: 10px;
 
   &:hover {
     box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.5);
