@@ -11,19 +11,23 @@ const Main: FC = () => {
     <ContentContainer data-class="ContentContainer">
       <SideBar />
       <MainContainer>
-        <Card width={70} height={20}>
+        <Card width={95} height={20}>
           <StockSymbols />
         </Card>
-        <Card width={70} height={40}>
+        <Card width={40}>
           <Wallet />
         </Card>
+        <Card width={50} height={20}>
+          your balanece is: U$ 25.000.000,00
+        </Card>
+        <Card width={100}>top 30 assets with best performance</Card>
       </MainContainer>
 
       <div className="side-bar-news">
-        {/* News... */}
-        <Card width={90} height={90}>
+        <Card width={80} height={90}>
           <News title="What is going on" />
         </Card>
+        <Card width={80}>this is another Card</Card>
       </div>
     </ContentContainer>
   );

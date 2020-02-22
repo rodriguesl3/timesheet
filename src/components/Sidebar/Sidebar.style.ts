@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const SideBarContainer = styled.div`
-  position: relative;
+  position: fixed;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
