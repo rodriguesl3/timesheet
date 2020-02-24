@@ -17,10 +17,7 @@ export const SpikeContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: 12px;
   border-bottom: 1px solid black;
-  padding-top: 10px;
-  padding-bottom: 10px;
 
   .symbol-description {
     padding-left: 12px;
