@@ -9,28 +9,36 @@ import Position from '../../components/Position/Position';
 
 const Main: FC = () => {
   return (
-    <ContentContainer data-class="ContentContainer">
-      <SideBar />
-      <MainContainer>
-        <Card width={95} height={20}>
-          <StockSymbols />
+    <>
+      {/* <MainContainer>
+        <Card width={30} height={20}>
+          this is a widget
         </Card>
-        <Card width={40}>
-          <Wallet />
-        </Card>
-        <Card width={90} height={60}>
-          <Position />
-        </Card>
-        <Card width={100}>top 30 assets with best performance</Card>
-      </MainContainer>
+      </MainContainer> */}
 
-      <div className="side-bar-news">
-        <Card width={80} height={90}>
-          <News title="What is going on" />
-        </Card>
-        <Card width={80}>this is another Card</Card>
-      </div>
-    </ContentContainer>
+      <ContentContainer data-class="ContentContainer">
+        <SideBar />
+        <MainContainer>
+          <Card width={40}>
+            <Wallet />
+          </Card>
+          <Card width={50} height={70}>
+            <Position />
+          </Card>
+          <Card width={95} height={20}>
+            <StockSymbols />
+          </Card>
+          <Card width={100}>top 30 assets with best performance</Card>
+        </MainContainer>
+
+        <div className="side-bar-news">
+          <Card width={80} height={90}>
+            <News title="What is going on" />
+          </Card>
+          <Card width={80}>this is another Card</Card>
+        </div>
+      </ContentContainer>
+    </>
   );
 };
 
