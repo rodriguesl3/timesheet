@@ -1,10 +1,17 @@
 import styled from 'styled-components';
 
+export const Col = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
 export const MainContainer = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 70%;
+  width: 90%;
   margin-left: 90px;
 `;
 
