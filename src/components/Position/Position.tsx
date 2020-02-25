@@ -2,16 +2,17 @@ import React, { useCallback } from 'react';
 import { useSelector } from 'react-redux';
 import { GlobalState } from '../../store/configureStore';
 import Chart from 'react-apexcharts';
+
+type SeriesChart = {
+  name: string;
+  data: number[];
+};
+
 const Position: React.FC = () => {
   const walletCompanies = useSelector((state: GlobalState) => state.walletState.companies);
 
   const state = {
-    series: [
-      {
-        name: 'U$',
-        data: walletCompanies[0]?.chart?.map(elm => elm.close) ?? [0],
-      },
-    ],
+    series: [] as SeriesChart[],
     options: {
       chart: {
         height: 350,
@@ -31,8 +32,8 @@ const Position: React.FC = () => {
       },
 
       yaxis: {
-        min: 300,
-        max: 350,
+        min: 0,
+        max: 330,
         lines: { show: false },
         title: {
           text: 'Position',
@@ -72,19 +73,22 @@ const Position: React.FC = () => {
   const averagePrice = useCallback(() => {
     if (!walletCompanies || walletCompanies.length === 0) return 0.0;
 
-    return (
-      walletCompanies
-        .map(company => company.quote.latestPrice)
-        .reduce((accum, curr): number => {
-          return (+accum || 0.0) + curr;
-        }) / walletCompanies.length
+    walletCompanies.map(wallet =>
+      state.series.push({ name: wallet.quote.companyName, data: wallet.chart.map(elm => elm.close) }),
     );
+
+    return walletCompanies
+      .map(company => company.quote.latestPrice)
+      .reduce((accum, curr): number => {
+        return (+accum || 0.0) + curr;
+      });
   }, [walletCompanies || []]);
 
   return (
     <>
-      <h1 style={{ textAlign: 'center' }}>Your balanece is: U$ {averagePrice().toFixed(2)}</h1>
       <Chart options={state.options} series={state.series} type="line" width={350} height={350} />
+      <hr />
+      <h1 style={{ textAlign: 'center' }}>Your balanece is: U$ {averagePrice().toFixed(2)}</h1>
     </>
   );
 };
