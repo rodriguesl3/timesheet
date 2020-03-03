@@ -1,6 +1,6 @@
 {
   "name": "timesheet",
-  "version": "0.2.3",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.26",
@@ -61,7 +61,7 @@
     "eject": "react-scripts eject",
     "lint": "tsc --noEmit && eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
     "release": "standard-version",
-    "commit" : "git-cz"
+    "commit": "git-cz"
   },
   "eslintConfig": {
     "extends": "react-app"
