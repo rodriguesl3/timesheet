@@ -2,6 +2,59 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 1.0.0 (2020-03-03)
+
+
+### Features
+
+* **login:** adjust component composition ([99157d0](https://github.com/rodriguesl3/timesheet/commit/99157d0407fda7256151c5b96b9f4e85db47bff0))
+* **login:** adjust login style page ([9422ccf](https://github.com/rodriguesl3/timesheet/commit/9422ccfcd93f65ab920872d4962438bd7aa74c46))
+* **login:** defined styled guide ([930a110](https://github.com/rodriguesl3/timesheet/commit/930a110deaf0196fa5e391bd5a94cd7c1fc28789))
+* **main:** add rechart, add card layout ([218e553](https://github.com/rodriguesl3/timesheet/commit/218e553c3b7600108ddb7856a4efadb7bf8e9c83))
+* **main:** add select component ([5b19de9](https://github.com/rodriguesl3/timesheet/commit/5b19de953f0a042c7b5a5c544697498b626f02ea))
+* **main:** create redux to consume stock symbols ([7180766](https://github.com/rodriguesl3/timesheet/commit/7180766db7bb7906a6dfa47a90ebc816598d7554))
+* **main:** wip - working on first layout ([721126f](https://github.com/rodriguesl3/timesheet/commit/721126fb6a92fe3f08e7e3aba36e71ddc719ff6e))
+* **main-page:** getting stock information from api ([4fb7f2c](https://github.com/rodriguesl3/timesheet/commit/4fb7f2c812749e60f2b2726a451b4fa4e581bd86))
+* **news-section:** adding news from symbol requested ([5319f4e](https://github.com/rodriguesl3/timesheet/commit/5319f4eec9a510484e72c7df770c739ca9ece34f))
+* **position:** add position chart ([78f1909](https://github.com/rodriguesl3/timesheet/commit/78f19095102f6557ffdf8a8b4d2e0c8a698d38f8))
+* add redux sagas, simulate login request ([87036b0](https://github.com/rodriguesl3/timesheet/commit/87036b00c147e3aa66c6205814daab48a5fc4944))
+* **position:** draft a chart in position market ([52331d9](https://github.com/rodriguesl3/timesheet/commit/52331d93396e918209b1cee8aa17c68e18d513a1))
+* **router:** implement first version of react-router ([773ce7f](https://github.com/rodriguesl3/timesheet/commit/773ce7fef9df82fe98c144e9bae5c22b998b84d1))
+* **sidebar:** add redux and redux sagas flow to request sidebar options ([fce192e](https://github.com/rodriguesl3/timesheet/commit/fce192e452e861386e57ce056681e971e21e4958))
+* **stocksymbols:** request stock symbols ([36ed858](https://github.com/rodriguesl3/timesheet/commit/36ed85897ff45d30a328e290116a31db8d3d7614))
+* **wallet:** add ducks foldter structure for wallet component ([bd37cd1](https://github.com/rodriguesl3/timesheet/commit/bd37cd14c9f0e09f0a0a5748ce30191efbe5a5b6))
+* **wip_wallet:** add redux and redux sagas structure ([a73b8e6](https://github.com/rodriguesl3/timesheet/commit/a73b8e6470757116240f542b34da6a8d01195ecc))
+
+
+### Others
+
+* **changelog:** add changelog, to improve release ([10632aa](https://github.com/rodriguesl3/timesheet/commit/10632aa8c635fcdc61fd054dbff6cfdc2d7c9999))
+* **changelog:** add release step to add information in changelog file ([c178754](https://github.com/rodriguesl3/timesheet/commit/c178754b71508a9bf00824c8c5d2b339541694a2))
+* **release:** 0.0.1 ([c8f3977](https://github.com/rodriguesl3/timesheet/commit/c8f39772def17d092825d480dc24ac3803dc66ea))
+* **release:** 0.0.2 ([7cd8938](https://github.com/rodriguesl3/timesheet/commit/7cd8938ea96a267cf8be2fed94e3dc53ffd0c1a6))
+* **release:** 0.0.3 ([6c49f88](https://github.com/rodriguesl3/timesheet/commit/6c49f88a6ef9c8c2817adc49a1557c33470bcce6))
+* adjust commit lint git hooks ([2832cb2](https://github.com/rodriguesl3/timesheet/commit/2832cb2a2b94f97fdfe7145b0d903235b6a83503))
+* **release:** 0.0.4 ([5e27fe2](https://github.com/rodriguesl3/timesheet/commit/5e27fe27c8d66bb102967758a6ddc9157d0d3ea1))
+* **release:** 0.1.0 ([1afe689](https://github.com/rodriguesl3/timesheet/commit/1afe6895d07bbfa6b3d13c44eec98e8e866c0a0c))
+* **release:** 0.1.1 ([7cb657c](https://github.com/rodriguesl3/timesheet/commit/7cb657cc78898f14d521ab9a580307b5a35fceef))
+* **release:** 0.2.0 ([83b3a9d](https://github.com/rodriguesl3/timesheet/commit/83b3a9d4d07d560c9b6d67245e9bf8ff8c9c1382))
+* **release:** 0.2.1 ([1a34057](https://github.com/rodriguesl3/timesheet/commit/1a34057ba987eaad35ef63b3053386348be1996b))
+* **release:** 0.2.3 ([7dd0e1b](https://github.com/rodriguesl3/timesheet/commit/7dd0e1bcf6d98c207978ca78b9f77c2e733eb854))
+
+
+### Styling
+
+* **dashboard:** add a header section ([bcb9c5c](https://github.com/rodriguesl3/timesheet/commit/bcb9c5c6689dff5c13a6085e21db4caa3a552536))
+* **main:** adjust content section background-color ([af1379f](https://github.com/rodriguesl3/timesheet/commit/af1379fb329ec02036ae2c506d1ec65f1efba46b))
+* **main:** adjust sidebar layout ([9a3d015](https://github.com/rodriguesl3/timesheet/commit/9a3d015dd2a738fccc7f478b3d43ce8b2f498b44))
+* **main-page:** adjust card position and sizes ([81f10a0](https://github.com/rodriguesl3/timesheet/commit/81f10a0f2b8c422236606a67a94206b9204f0498))
+* **main-page:** adjust position of cards in main page ([feb5a91](https://github.com/rodriguesl3/timesheet/commit/feb5a9160d82f423bd36507768e0b84aeaeb0bae))
+* **news:** adjust news tab panel ([80b3eae](https://github.com/rodriguesl3/timesheet/commit/80b3eaed103ff9bbbab133db4c77e2ac24a69c59))
+* **news:** fix news list ([e3c4252](https://github.com/rodriguesl3/timesheet/commit/e3c42521fad462645077ffde220100b96620eb7e))
+* **news_section:** (wip) styiling news section ([ccab7f6](https://github.com/rodriguesl3/timesheet/commit/ccab7f66d1ff23b213603a621811fdc78fa5ef8a))
+* **position:** add multi line in position chart ([63250d4](https://github.com/rodriguesl3/timesheet/commit/63250d4de39295a14d6042da1a299a79e43117a6))
+* **wallet:** adjust padding row size ([150ce8e](https://github.com/rodriguesl3/timesheet/commit/150ce8e4689be62cb81cfd9fda4de6e472c8ef4b))
+
 ### [0.2.3](https://github.com/rodriguesl3/timesheet/compare/v0.2.0...v0.2.3) (2020-03-03)
 
 
