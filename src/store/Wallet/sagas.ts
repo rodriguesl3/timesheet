@@ -1,9 +1,9 @@
 import { WalletTypes, Company } from './types';
-import { fullUrlBatchWalletInformation } from '../../services/constant';
+//import { fullUrlBatchWalletInformation } from '../../services/constant';
 import { call, put } from 'redux-saga/effects';
-import api from '../../services';
+//import api from '../../services';
 import { walletSuccess, walletFailure } from './action';
-import mockData from './mock.json';
+import mockData from '../../services/mock.json';
 
 type selectTableList = {
   value: string;
