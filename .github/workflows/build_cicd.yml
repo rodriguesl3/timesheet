@@ -17,14 +17,10 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: npm ci
-    - run: npm run build --if-present
+    - run: npm run build
     
-    - name: Install Packages
-      run: npm install
-    
-    - name: Deploy to GH Pages
-      run: npm run deploy
-    
-      env:
-        CI: true
+    - name: GitHub Pages action
+      uses: peaceiris/actions-gh-pages@v3.5.0
+    with:
+      github_token: ${{ secrets.GH_TOKEN }}
+      publish_dir: ./public
