@@ -61,7 +61,8 @@
     "eject": "react-scripts eject",
     "lint": "tsc --noEmit && eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
     "release": "standard-version",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -96,6 +97,7 @@
     "enzyme-to-json": "^3.4.3",
     "eslint-config-prettier": "^6.9.0",
     "eslint-plugin-prettier": "^3.1.2",
+    "gh-pages": "^2.2.0",
     "husky": "^3.1.0",
     "jest": "^24.9.0",
     "jest-cli": "^24.9.0",

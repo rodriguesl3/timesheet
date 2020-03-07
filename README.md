@@ -1,3 +1,6 @@
+Badges:
+![CI](https://github.com/rodriguesl3/timesheet/workflows/CI/badge.svg?branch=develop)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 
