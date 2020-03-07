@@ -1,5 +1,45 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+
+## Introduction
+This project is an application where get stock market information and compile in multiple views, in this first version, we are doing a dashboard where is possible?
+
+* Last 30 days value
+* Current price 
+* Candle stick chart
+* News related of companies searched
+* Top trend companies
+* Current position (Wallet value)
+
+## Technology Used
+### Front end:
+* ReactJS ***hooks and functional components***
+* TypeScript
+* React Redux 
+* Redux Saga
+* React Router
+* APEX Chart
+
+### Development:
+* Git Hooks:
+  
+  * Using husky when a developer add a new commit before to complete it, husky will run test and build typescript code, to make sure that everything is ok.
+
+* Commit Message:
+  
+  * Following [commitlint](https://github.com/conventional-changelog/commitlint) all commits need to follow this standard.
+
+
+## Some useful scripts:
+
+Runs `npm install` to install locally all project dependencies.
+
+Runs `npm start` to run locally in your browser through [http://localhost:3000](http://localhost:3000).
+
+Runs `npm test` to run all test written using Jest and Enzyme.
+
+
+---
 ## Available Scripts
 
 In the project directory, you can run:
