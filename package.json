@@ -120,7 +120,7 @@
   "bugs": {
     "url": "https://github.com/rodriguesl3/timesheet/issues"
   },
-  "homepage": "https://github.com/rodriguesl3/timesheet#readme",
+  "homepage": "https://rodriguesl3.github.io/timesheet/",
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
