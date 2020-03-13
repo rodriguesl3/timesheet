@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.js": "/rodriguesl3/timesheet/static/js/main.bff71ece.chunk.js",
+    "main.js.map": "/rodriguesl3/timesheet/static/js/main.bff71ece.chunk.js.map",
+    "runtime-main.js": "/rodriguesl3/timesheet/static/js/runtime-main.8dee7889.js",
+    "runtime-main.js.map": "/rodriguesl3/timesheet/static/js/runtime-main.8dee7889.js.map",
+    "static/css/2.24928661.chunk.css": "/rodriguesl3/timesheet/static/css/2.24928661.chunk.css",
+    "static/js/2.2c91ef2a.chunk.js": "/rodriguesl3/timesheet/static/js/2.2c91ef2a.chunk.js",
+    "static/js/2.2c91ef2a.chunk.js.map": "/rodriguesl3/timesheet/static/js/2.2c91ef2a.chunk.js.map",
+    "index.html": "/rodriguesl3/timesheet/index.html",
+    "precache-manifest.84a73e23d58d075bdb0283a04e939e38.js": "/rodriguesl3/timesheet/precache-manifest.84a73e23d58d075bdb0283a04e939e38.js",
+    "service-worker.js": "/rodriguesl3/timesheet/service-worker.js",
+    "static/css/2.24928661.chunk.css.map": "/rodriguesl3/timesheet/static/css/2.24928661.chunk.css.map",
+    "static/js/2.2c91ef2a.chunk.js.LICENSE": "/rodriguesl3/timesheet/static/js/2.2c91ef2a.chunk.js.LICENSE",
+    "static/media/New_York.png": "/rodriguesl3/timesheet/static/media/New_York.2babb95c.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8dee7889.js",
+    "static/css/2.24928661.chunk.css",
+    "static/js/2.2c91ef2a.chunk.js",
+    "static/js/main.bff71ece.chunk.js"
+  ]
+}
