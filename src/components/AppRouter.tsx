@@ -8,7 +8,7 @@ import Main from '../pages/Main';
 //https://itnext.io/async-react-using-react-router-suspense-a86ade1176dc
 const AppRouter: FC = () => {
   return (
-    <Router>
+    <Router basename="/timesheet">
       <Switch>
         <Route path="/main" component={Main} />
         <Route path="/" exact component={LoginForm} />
