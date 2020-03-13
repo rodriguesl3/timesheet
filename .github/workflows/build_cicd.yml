@@ -17,9 +17,12 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
+    - run: ls
+    - run: env
+    - run: pwd
     - run: npm install
     - run: npm run build
-    - run: cp -a .\build\. .\public\
+    - run: cp -a ..\build\. ..\public\
     
     - name: GitHub Pages action
       uses: peaceiris/actions-gh-pages@v3.5.0
