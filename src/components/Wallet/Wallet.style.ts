@@ -17,13 +17,22 @@ export const SpikeContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  border-bottom: 1px solid black;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-bottom: 1px solid lightgray;
+  justify-content: space-between;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  cursor: pointer;
+  background-color: white;
 
   .symbol-description {
     padding-left: 12px;
   }
   .spike-arrow {
-    margin-left: 5px;
+    /* margin-left: 5px; */
   }
 `;
 

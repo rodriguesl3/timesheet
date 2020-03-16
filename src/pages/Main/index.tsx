@@ -10,12 +10,6 @@ import Position from '../../components/Position/Position';
 const Main: FC = () => {
   return (
     <>
-      {/* <MainContainer>
-       <Card width={30} height={20}>
-            this is a widget
-          </Card>
-      </MainContainer> */}
-
       <ContentContainer data-class="ContentContainer">
         <SideBar />
         <Col>

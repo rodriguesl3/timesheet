@@ -1,5 +1,6 @@
 import React, { FC, useEffect } from 'react';
 import { useSelector } from 'react-redux';
+import { FaArrowUp, FaArrowDown } from 'react-icons/fa';
 
 import { GlobalState } from '../../store/configureStore';
 import { WalletCompanyContainer, WalletTitle, SpikeContainer } from './Wallet.style';
@@ -53,16 +54,25 @@ const Wallet: FC = () => {
     <>
       <WalletTitle>Your Portfolio</WalletTitle>
       {series.map(segment => (
-        <SpikeContainer key={segment.symbol}>
-          <Chart options={options} series={segment.chart} type="line" width={50} height={50} />
+        <SpikeContainer
+          key={segment.symbol}
+          onClick={() => {
+            console.log(segment);
+          }}
+        >
+          <Chart options={options} series={segment.chart} type="line" width={70} height={50} />
           <div className="symbol-description">
             <span>{segment.symbol}</span>
           </div>
           <div className="spike-arrow">
             {segment.chart[0].data[0] < segment.chart[0].data[segment.chart[0].data.length - 1] ? (
-              <span style={{ color: 'green' }}>up-arrow</span>
+              <span style={{ color: 'green' }}>
+                <FaArrowUp />
+              </span>
             ) : (
-              <span style={{ color: 'red' }}>down-arrow</span>
+              <span style={{ color: 'red' }}>
+                <FaArrowDown />
+              </span>
             )}
           </div>
         </SpikeContainer>
